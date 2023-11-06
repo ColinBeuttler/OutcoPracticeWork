@@ -66,11 +66,12 @@ class BinarySearchTree {
   public TreeNode root;
   public int size;
 
-  public BinarySearchTree() {
+  public BinarySearchTree(TreeNode root, int data) {
     // YOUR WORK HERE
     if (this.root == null)
-      this.root = new TreeNode(size);
-      size ++;
+      this.root = new TreeNode(data);
+
+      
 
   }
 
@@ -79,8 +80,8 @@ class BinarySearchTree {
   // Auxiliary Space Complexity:
   public void insert(int value) {
     // YOUR WORK HERE
-    if (parent.value > value)
-      parent.left = value;
+    if (root.value > value) root.left = value;
+      
     else if (TreeNode.root > value)
       TreeNode.left.insert(value);  }
 
